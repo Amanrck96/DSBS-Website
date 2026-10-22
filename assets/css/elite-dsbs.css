@@ -2827,6 +2827,38 @@ ul, ol {
   .footer-links-horizontal-list {
     gap: 0.65rem 1.25rem;
   }
+  /* Mobile Hero Carousel Proportions - Zero Cropping & Letterboxing */
+  .elite-carousel-track {
+    min-height: auto !important;
+  }
+  .elite-carousel-btn {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 13px !important;
+  }
+  .elite-carousel-prev {
+    left: 8px !important;
+  }
+  .elite-carousel-next {
+    right: 8px !important;
+  }
+  /* Compact Non-Intrusive Floating Action Icons */
+  #sp-right-sticky {
+    top: auto;
+    bottom: 80px;
+    transform: none;
+  }
+  .main-sticky .sub-social-icons {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 22px 0 0 22px !important;
+  }
+  .main-sticky .sub-social-icons span {
+    display: none !important;
+  }
+  .ee-register-now.right {
+    display: none !important;
+  }
 }
 
 @media (max-width: 480px) {
