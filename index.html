@@ -14214,13 +14214,13 @@ function loadPageData(slug, defaultTitle) {
     var title = page.title || defaultTitle;
     var html = '<div>';
     if (page.category) html += '<span style="color:#14B8A6; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:1px;">' + page.category + '</span>';
-    html += '<h3 style="color:#FFFFFF; margin-top:5px; margin-bottom:15px;">' + title + '</h3>';
+    html += '<h3 style="color:#0B192C; font-weight:800; font-size:22px; margin-top:6px; margin-bottom:16px;">' + title + '</h3>';
     
     if (page.sections && page.sections.length > 0) {
       page.sections.forEach(function(sec) {
-        if (sec.heading && sec.heading !== title) html += '<h4>' + sec.heading + '</h4>';
-        if (sec.content) html += '<p>' + sec.content + '</p>';
-        else if (sec.field) html += '<p>' + sec.field + '</p>';
+        if (sec.heading && sec.heading !== title) html += '<h4 style="color:#0F172A; font-weight:700; font-size:16px; margin-top:14px; margin-bottom:8px;">' + sec.heading + '</h4>';
+        if (sec.content) html += '<p style="color:#334155; line-height:1.65; margin-bottom:12px;">' + sec.content + '</p>';
+        else if (sec.field) html += '<p style="color:#334155; line-height:1.65; margin-bottom:12px;">' + sec.field + '</p>';
       });
     }
     html += '<div style="margin-top:25px; padding-top:15px; border-top:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center;">' +
@@ -14232,9 +14232,9 @@ function loadPageData(slug, defaultTitle) {
   } else {
     // Fallback template
     var html = '<div style="padding:10px 0;">' +
-               '<h3 style="color:#FFFFFF; margin-bottom:15px;">' + defaultTitle + '</h3>' +
-               '<p>Admin Business School (Admin Business School) offers premier AICTE-approved 2-year full-time PGDM programs with dual specializations, world-class faculty, and 100% placement track record.</p>' +
-               '<p>For detailed inquiries regarding ' + defaultTitle + ', please connect with our admissions desk.</p>' +
+               '<h3 style="color:#0B192C; font-weight:800; font-size:22px; margin-bottom:15px;">' + defaultTitle + '</h3>' +
+               '<p style="color:#334155; line-height:1.65;">Admin Business School (Admin Business School) offers premier AICTE-approved 2-year full-time PGDM programs with dual specializations, world-class faculty, and 100% placement track record.</p>' +
+               '<p style="color:#334155; line-height:1.65;">For detailed inquiries regarding ' + defaultTitle + ', please connect with our admissions desk.</p>' +
                '<div style="margin-top:20px;">' +
                '<button onclick="openEnquiryDrawer(\'' + defaultTitle + '\')" style="background:#e60023; color:#fff; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; font-weight:700;">Enquire Now</button>' +
                '</div>' +
