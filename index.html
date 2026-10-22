@@ -3385,69 +3385,121 @@ img#__eechatIcon {
   </section>
 
   <!-- =========================================================================
-       4. BODY SECTION A: HERO CAROUSEL SECTION
+       4. BODY SECTION A: FULL-WIDTH MODERN SPLIT-SCREEN HERO SECTION
        ========================================================================= -->
-  <section class="elite-hero-section">
-    <div class="elite-container-fluid">
-      <div class="elite-hero-card">
-        <div class="elite-carousel-container" id="main-hero-slider">
-          <div class="elite-carousel-track">
-            <!-- Slide 1: Rankings -->
-            <div class="elite-carousel-slide active">
-              <a href="javascript:void(0)" onclick="openEnquiryDrawer('Hero Slide Rankings')">
-                <img alt="Admin Business School Ranking" src="images/DSBS_Ranking_1_1.png"/>
-              </a>
+  <section class="elite-hero-split-section" id="hero">
+    <div class="hero-split-bg-glow"></div>
+    <div class="elite-container-fluid hero-split-container">
+      <div class="hero-split-grid">
+        
+        <!-- Left Column: Headline, Institutional Badges, Highlights & Actions -->
+        <div class="hero-split-left">
+          <div class="hero-elite-pill">
+            <span class="hero-pill-icon"><i class="fa fa-university" aria-hidden="true"></i></span>
+            <span class="hero-pill-text">AICTE Approved &bull; Ministry of Education, Govt. of India</span>
+          </div>
+
+          <h1 class="hero-split-heading">
+            Empowering <span class="hero-highlight-word">Visionary Leaders</span> For A Global Future
+          </h1>
+
+          <p class="hero-split-tagline">
+            Admin Business School delivers a premier 2-Year Full-Time PGDM with Dual Specializations, world-class faculty mentorship, and a stellar corporate placement network in Bengaluru.
+          </p>
+
+          <!-- Key Highlights Metric Grid -->
+          <div class="hero-highlights-grid">
+            <div class="hero-highlight-item">
+              <div class="highlight-val">₹30 <span class="highlight-unit">LPA</span></div>
+              <div class="highlight-lbl">Highest Package</div>
             </div>
-            <!-- Slide 2: Welcome -->
-            <div class="elite-carousel-slide">
-              <a href="javascript:void(0)" onclick="openEnquiryDrawer('Hero Slide Welcome')">
-                <img alt="Welcome to Admin Business School" src="images/Welcome_To1.png"/>
-              </a>
+            <div class="hero-highlight-item">
+              <div class="highlight-val">₹10.46 <span class="highlight-unit">LPA</span></div>
+              <div class="highlight-lbl">Average Package</div>
             </div>
-            <!-- Slide 3: Industry Interface -->
-            <div class="elite-carousel-slide">
-              <a href="javascript:void(0)" onclick="openEnquiryDrawer('Hero Slide Industry Interface')">
-                <img alt="Industry Interface" src="images/INDUSTRY_INTERFACE.png"/>
-              </a>
+            <div class="hero-highlight-item">
+              <div class="highlight-val">100%</div>
+              <div class="highlight-lbl">Placement Record</div>
             </div>
-            <!-- Slide 4: Responsible Leaders -->
-            <div class="elite-carousel-slide">
-              <a href="javascript:void(0)" onclick="openEnquiryDrawer('Hero Slide Responsible Leaders')">
-                <img alt="Developing Responsible Leaders" src="images/DEVELOPING_RESPONSIBLE_LEADERS.png"/>
-              </a>
-            </div>
-            <!-- Slide 5: Global Exposure -->
-            <div class="elite-carousel-slide">
-              <a href="javascript:void(0)" onclick="openEnquiryDrawer('Hero Slide Global Exposure')">
-                <img alt="National and Global Exposure" src="images/NATIONAL_AND_GLOBAL_EXPOSURE.png"/>
-              </a>
-            </div>
-            <!-- Slide 6: Dual Specializations -->
-            <div class="elite-carousel-slide">
-              <a href="javascript:void(0)" onclick="openEnquiryDrawer('Hero Slide Dual Specializations')">
-                <img alt="Dual Specializations" src="images/Dual_Specializations.png"/>
-              </a>
+            <div class="hero-highlight-item">
+              <div class="highlight-val">250+</div>
+              <div class="highlight-lbl">Top Recruiters</div>
             </div>
           </div>
 
-          <!-- Controls -->
-          <button class="elite-carousel-btn elite-carousel-prev" onclick="prevHeroSlide()" aria-label="Previous Slide">
-            <i class="fa fa-chevron-left"></i>
-          </button>
-          <button class="elite-carousel-btn elite-carousel-next" onclick="nextHeroSlide()" aria-label="Next Slide">
-            <i class="fa fa-chevron-right"></i>
-          </button>
+          <!-- Action Buttons -->
+          <div class="hero-cta-actions">
+            <a href="apply-now.html" class="hero-btn-primary" title="Apply for Admissions 2026">
+              <span>Apply for Admissions 2026</span>
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <button class="hero-btn-secondary" onclick="openEnquiryDrawer('Hero Brochure Request')">
+              <i class="fa fa-download" aria-hidden="true"></i>
+              <span>Download Brochure</span>
+            </button>
+            <a href="#dual-spec" class="hero-link-secondary" title="Explore Dual Specializations">
+              <span>Explore Specializations</span>
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </a>
+          </div>
 
-          <!-- Dots -->
-          <div class="elite-carousel-dots">
-            <span class="elite-carousel-dot active" onclick="goToHeroSlide(0)"></span>
-            <span class="elite-carousel-dot" onclick="goToHeroSlide(1)"></span>
-            <span class="elite-carousel-dot" onclick="goToHeroSlide(2)"></span>
-            <span class="elite-carousel-dot" onclick="goToHeroSlide(3)"></span>
-            <span class="elite-carousel-dot" onclick="goToHeroSlide(4)"></span>
-            <span class="elite-carousel-dot" onclick="goToHeroSlide(5)"></span>
+          <!-- Bottom Accreditations Trust Ribbon -->
+          <div class="hero-trust-ribbon">
+            <span class="trust-title">Recognitions:</span>
+            <div class="trust-badges-list">
+              <span class="trust-badge">AICTE Approved</span>
+              <span class="trust-badge">Ministry of Education</span>
+              <span class="trust-badge">IIC Innovation Council</span>
+              <span class="trust-badge">Ranked #36 B-School</span>
+            </div>
           </div>
         </div>
+
+        <!-- Right Column: Clean Visual Showcase Card -->
+        <div class="hero-split-right">
+          <div class="hero-visual-card">
+            <!-- Decorative Accent Elements -->
+            <div class="card-accent-glow"></div>
+            
+            <!-- Main Showcase Image Container -->
+            <div class="hero-card-img-wrap">
+              <img src="images/ff963f67e8030246e33e952ec2b00108.jpg" alt="Admin Business School Campus Life &amp; Academic Excellence" class="hero-card-img">
+              <div class="hero-card-gradient-overlay"></div>
+            </div>
+
+            <!-- Floating Stat Badges -->
+            <div class="hero-floating-badge badge-top-right">
+              <div class="badge-icon gold"><i class="fa fa-trophy" aria-hidden="true"></i></div>
+              <div class="badge-info">
+                <strong>Top 40 B-School</strong>
+                <span>Pan-India IIRF Ranking</span>
+              </div>
+            </div>
+
+            <div class="hero-floating-badge badge-bottom-left">
+              <div class="badge-icon crimson"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+              <div class="badge-info">
+                <strong>Dual Specializations</strong>
+                <span>AI, FinTech, Mktg, HR, Ops</span>
+              </div>
+            </div>
+
+            <!-- Visual Card Footer Banner -->
+            <div class="hero-card-bottom-banner">
+              <div class="card-bottom-content">
+                <div class="bottom-brand">
+                  <img src="images/dsblogo-1.png" alt="Admin Business School" class="bottom-logo">
+                  <div>
+                    <h4>Admin Business School</h4>
+                    <p>Bengaluru Campus &bull; Batch 2026–28</p>
+                  </div>
+                </div>
+                <a href="apply-now.html" class="bottom-quick-apply" title="Apply Online">Apply Online &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
