@@ -105,13 +105,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const offcanvasOverlay = document.querySelector('.offcanvas-overlay');
   const closeOffcanvas = document.querySelector('.close-offcanvas');
 
-  function openMobileMenu() {
+  function openMobileMenu(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    document.body.classList.add('offcanvas-active');
     if (offcanvasMenu) offcanvasMenu.classList.add('active');
     if (offcanvasOverlay) offcanvasOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
-  function closeMobileMenu() {
+  function closeMobileMenu(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    document.body.classList.remove('offcanvas-active');
     if (offcanvasMenu) offcanvasMenu.classList.remove('active');
     if (offcanvasOverlay) offcanvasOverlay.classList.remove('active');
     document.body.style.overflow = '';

@@ -105,6 +105,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nativeForm) {
         nativeForm.addEventListener('submit', function (e) {
             e.preventDefault();
+
+            // Strict 10-digit Indian Mobile Validation
+            const phoneInput = nativeForm.querySelector('input[name="phone"]');
+            if (phoneInput) {
+                const phoneVal = phoneInput.value.replace(/[\s-]/g, '');
+                if (!/^[6-9]\d{9}$/.test(phoneVal)) {
+                    alert('Please enter a valid 10-digit Indian mobile number (starting with 6, 7, 8, or 9).');
+                    phoneInput.focus();
+                    return;
+                }
+            }
+
             const submitBtn = nativeForm.querySelector('button[type="submit"]');
             const originalText = submitBtn ? submitBtn.innerHTML : 'Submit';
 

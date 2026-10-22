@@ -3904,7 +3904,7 @@ img#__eechatIcon {
 <h2 class="accred-title" style="text-align: center !important; margin: 0 auto !important; width: 100% !important;">Accreditations and Associations</h2>
 </div>
 <div class="accred-slider-container">
-<button class="accred-nav-btn accred-prev" onclick="scrollAccredTrack(-1)"><i class="fa fa-chevron-left"></i></button>
+<button class="accred-nav-btn accred-prev" onclick="scrollAccredTrack(-1)" aria-label="Previous Accreditation Slide"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
 <div class="accred-marquee-wrapper" id="accred-marquee-wrap">
 <div class="accred-track" id="accred-track">
 <!-- Card 1: Calibr (Matches screenshot) -->
@@ -3994,7 +3994,7 @@ img#__eechatIcon {
 </div>
 </div>
 </div>
-<button class="accred-nav-btn accred-next" onclick="scrollAccredTrack(1)"><i class="fa fa-chevron-right"></i></button>
+<button class="accred-nav-btn accred-next" onclick="scrollAccredTrack(1)" aria-label="Next Accreditation Slide"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 </div>
 </div>
 </section>
@@ -14500,6 +14500,61 @@ function scrollAccredTrack(direction) {
   }
 }
 </script>
+
+  <!-- =========================================================================
+       INTERACTIVE USER EXPERIENCE: ENQUIRY DRAWER & SUBPAGE CONTENT MODAL
+       ========================================================================= -->
+  <div id="enquiry-drawer-overlay" onclick="closeEnquiryDrawer()"></div>
+  <aside id="enquiry-drawer" class="enquiry-drawer" aria-label="Admissions Quick Enquiry Drawer">
+    <div class="enquiry-drawer-header">
+      <button class="enquiry-drawer-close" onclick="closeEnquiryDrawer()" aria-label="Close Enquiry Drawer">&times;</button>
+      <h3>Admissions Enquiry 2026</h3>
+      <p>Connect with our Academic Counsellor &amp; Download Official Brochure</p>
+    </div>
+    <div class="enquiry-drawer-body">
+      <div id="enquiry-alert"></div>
+      <form id="enquiry-form" onsubmit="handleEnquirySubmit(event)">
+        <div class="enquiry-form-group">
+          <label for="eq-name">Full Name *</label>
+          <input type="text" id="eq-name" name="name" required placeholder="e.g. Rahul Sharma" autocomplete="name">
+        </div>
+        <div class="enquiry-form-group">
+          <label for="eq-email">Email Address *</label>
+          <input type="email" id="eq-email" name="email" required placeholder="e.g. rahul@example.com" autocomplete="email">
+        </div>
+        <div class="enquiry-form-group">
+          <label for="eq-phone">Mobile Number (10 digits) *</label>
+          <input type="tel" id="eq-phone" name="phone" pattern="[0-9]{10}" required placeholder="e.g. 9876543210" autocomplete="tel">
+        </div>
+        <div class="enquiry-form-group">
+          <label for="eq-program">Specialization of Interest</label>
+          <select id="eq-program" name="program">
+            <option value="PGDM Dual - Marketing &amp; Finance">PGDM Dual - Marketing &amp; Finance</option>
+            <option value="PGDM Dual - AI &amp; FinTech">PGDM Dual - AI &amp; FinTech</option>
+            <option value="PGDM Dual - Business Analytics &amp; HR">PGDM Dual - Business Analytics &amp; HR</option>
+            <option value="PGDM Dual - Logistics &amp; Operations">PGDM Dual - Logistics &amp; Operations</option>
+            <option value="General PGDM Admissions 2026">General PGDM Admissions 2026</option>
+          </select>
+        </div>
+        <button type="submit" class="enquiry-submit-btn">
+          <span>Submit Enquiry &amp; Download Brochure</span>
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- Subpage Content Modal -->
+  <div id="dsbs-content-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="dsbs-modal-dialog">
+      <div class="dsbs-modal-header">
+        <h3 id="modal-title">Admin Business School</h3>
+        <button class="dsbs-modal-close" onclick="closeContentModal()" aria-label="Close Content Modal">&times;</button>
+      </div>
+      <div class="dsbs-modal-body" id="modal-body-content"></div>
+    </div>
+  </div>
+
 <script src="assets/js/elite-dsbs.js"></script>
 </body>
 </html>
